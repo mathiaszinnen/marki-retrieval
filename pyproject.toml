@@ -1,0 +1,31 @@
+[project]
+name = "marki-retrieval"
+version = "0.0.1"
+description = "A simple webservice for image similarity and classification."
+authors = [{ name = "Mathias Zinnen", email = "mathias.zinnen@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pillow",
+    "faiss-cpu",
+    "numpy",
+    "torch",
+    "torchvision",
+    "python-multipart",
+    "httpx",
+    "opencv-python"
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["preparation*", "webservice*", "test*"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

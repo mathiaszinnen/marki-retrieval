@@ -88,5 +88,5 @@ def download_all(base_url, target_dir):
 
 if __name__ == '__main__':
     base_url = 'https://ngk.wisski.cloud'
-    target_dir = os.path.expanduser('~/data/marki')
+    target_dir = os.path.expanduser('~/data/marki/images')
     download_all(base_url, target_dir)
